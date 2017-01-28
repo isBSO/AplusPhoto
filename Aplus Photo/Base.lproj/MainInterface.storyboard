@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Aplus_Photo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoR-LK-Qga">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fu-SJ-hAO">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="RdZ-t4-VVj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeV-Km-g3R">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="PIg-Eu-Web"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6Fu-SJ-hAO" secondAttribute="trailing" id="1Y2-bu-Dss"/>
+                                    <constraint firstItem="ZeV-Km-g3R" firstAttribute="top" secondItem="DoR-LK-Qga" secondAttribute="top" id="42Z-fl-gCd"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZeV-Km-g3R" secondAttribute="bottom" id="Jat-rZ-49Y"/>
+                                    <constraint firstItem="6Fu-SJ-hAO" firstAttribute="top" secondItem="DoR-LK-Qga" secondAttribute="top" id="Oqd-7e-cWb"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Fu-SJ-hAO" secondAttribute="bottom" id="Ve4-qS-aUo"/>
+                                    <constraint firstItem="6Fu-SJ-hAO" firstAttribute="width" secondItem="ZeV-Km-g3R" secondAttribute="width" id="W41-Fr-XKd"/>
+                                    <constraint firstItem="6Fu-SJ-hAO" firstAttribute="leading" secondItem="ZeV-Km-g3R" secondAttribute="trailing" id="rd3-Aa-cd7"/>
+                                    <constraint firstItem="ZeV-Km-g3R" firstAttribute="leading" secondItem="DoR-LK-Qga" secondAttribute="leading" id="tKr-dW-soP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osr-6b-xM3">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Take Pictures">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doTheAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="gbI-QK-y7q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DoR-LK-Qga" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="0d5-Gr-9Tp"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="osr-6b-xM3" secondAttribute="bottom" id="KVW-23-oL7"/>
+                            <constraint firstItem="osr-6b-xM3" firstAttribute="top" secondItem="DoR-LK-Qga" secondAttribute="bottom" id="MFt-S9-yYh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DoR-LK-Qga" secondAttribute="trailing" id="PAp-16-53O"/>
+                            <constraint firstItem="osr-6b-xM3" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="WmE-SU-a5s"/>
+                            <constraint firstAttribute="trailing" secondItem="osr-6b-xM3" secondAttribute="trailing" id="Zec-48-EMc"/>
+                            <constraint firstItem="DoR-LK-Qga" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="heT-Qx-sHf"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="200"/>
+                    <connections>
+                        <outlet property="interValLabel" destination="6Fu-SJ-hAO" id="9SF-GZ-25B"/>
+                        <outlet property="timesLabel" destination="ZeV-Km-g3R" id="cTw-MX-cUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65.599999999999994" y="8.995502248875562"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TimerOptionsCell" id="gTV-IL-0wX" customClass="TimerOptionsCell" customModule="Scanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzG-fz-v2E">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="pzG-fz-v2E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jyC-kq-eU7"/>
+                <constraint firstItem="pzG-fz-v2E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="k79-We-Grl"/>
+                <constraint firstAttribute="trailing" secondItem="pzG-fz-v2E" secondAttribute="trailing" id="tbg-Kd-tnr"/>
+                <constraint firstAttribute="bottom" secondItem="pzG-fz-v2E" secondAttribute="bottom" id="yEG-zH-Be6"/>
+            </constraints>
+            <size key="customSize" width="46" height="-7"/>
+            <connections>
+                <outlet property="optL" destination="pzG-fz-v2E" id="oZG-Wc-bNc"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="101"/>
+        </collectionViewCell>
+    </objects>
+</document>

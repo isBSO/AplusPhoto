@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ISOOptionsView" customModule="Scanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DE6-DE-Uaf">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NHj-5z-3yq">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="QMg-N0-JXC"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="I2r-eZ-udA"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFA-es-qSR">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I4-2x-5yO">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <size key="titleShadowOffset" width="1" height="1"/>
+                            <state key="normal" title="Reset">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="reset:" destination="iN0-l3-epB" eventType="touchUpInside" id="eYh-9J-zv6"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fy-fi-voB">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.75084338097465364" green="1" blue="0.95109060490518027" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <size key="shadowOffset" width="1" height="0.0"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fee-PW-A0o">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <size key="titleShadowOffset" width="1" height="1"/>
+                            <state key="normal" title="Save">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="saveTheISOANDTIME:" destination="iN0-l3-epB" eventType="touchUpInside" id="5wS-G8-phG"/>
+                            </connections>
+                        </button>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PZS-iL-TUh">
+                            <connections>
+                                <action selector="isoValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="nC7-za-JFb"/>
+                            </connections>
+                        </slider>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCL-X9-KaF">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.75084338097465364" green="1" blue="0.95109060490518027" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <size key="shadowOffset" width="1" height="0.0"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D2G-nu-oQ9">
+                            <connections>
+                                <action selector="sliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="73k-Qg-b36"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="D2G-nu-oQ9" firstAttribute="leading" secondItem="VFA-es-qSR" secondAttribute="leading" constant="20" id="4pX-Qv-Ptb"/>
+                        <constraint firstItem="PZS-iL-TUh" firstAttribute="top" secondItem="7fy-fi-voB" secondAttribute="bottom" id="9FQ-wc-COa"/>
+                        <constraint firstItem="D2G-nu-oQ9" firstAttribute="top" secondItem="fCL-X9-KaF" secondAttribute="bottom" id="EjS-9v-oXu"/>
+                        <constraint firstItem="fCL-X9-KaF" firstAttribute="leading" secondItem="VFA-es-qSR" secondAttribute="leading" id="Fti-L8-fqb"/>
+                        <constraint firstItem="5I4-2x-5yO" firstAttribute="top" secondItem="VFA-es-qSR" secondAttribute="top" constant="20" id="JON-6v-7km"/>
+                        <constraint firstAttribute="trailing" secondItem="fCL-X9-KaF" secondAttribute="trailing" id="Lx0-Vu-6hd"/>
+                        <constraint firstAttribute="trailing" secondItem="Fee-PW-A0o" secondAttribute="trailing" id="YuC-23-mFa"/>
+                        <constraint firstItem="PZS-iL-TUh" firstAttribute="leading" secondItem="VFA-es-qSR" secondAttribute="leading" constant="20" id="aI8-mo-F4x"/>
+                        <constraint firstAttribute="trailing" secondItem="PZS-iL-TUh" secondAttribute="trailing" constant="20" id="eZ3-MI-YPr"/>
+                        <constraint firstAttribute="trailing" secondItem="D2G-nu-oQ9" secondAttribute="trailing" constant="20" id="g0C-8C-b9v"/>
+                        <constraint firstItem="7fy-fi-voB" firstAttribute="leading" secondItem="VFA-es-qSR" secondAttribute="leading" id="il6-lB-FH1"/>
+                        <constraint firstItem="fCL-X9-KaF" firstAttribute="top" secondItem="5I4-2x-5yO" secondAttribute="bottom" constant="20" id="luC-Aa-Osx"/>
+                        <constraint firstItem="Fee-PW-A0o" firstAttribute="top" secondItem="PZS-iL-TUh" secondAttribute="bottom" constant="8" id="mQa-zl-GCd"/>
+                        <constraint firstAttribute="bottom" secondItem="Fee-PW-A0o" secondAttribute="bottom" constant="8" id="nrn-Qu-Lwy"/>
+                        <constraint firstItem="Fee-PW-A0o" firstAttribute="leading" secondItem="VFA-es-qSR" secondAttribute="leading" id="pje-3Z-7M6"/>
+                        <constraint firstItem="7fy-fi-voB" firstAttribute="top" secondItem="D2G-nu-oQ9" secondAttribute="bottom" id="smu-8a-qaL"/>
+                        <constraint firstItem="5I4-2x-5yO" firstAttribute="leading" secondItem="VFA-es-qSR" secondAttribute="leading" id="xAm-sK-XIv"/>
+                        <constraint firstAttribute="trailing" secondItem="7fy-fi-voB" secondAttribute="trailing" id="xSg-xC-eie"/>
+                        <constraint firstAttribute="trailing" secondItem="5I4-2x-5yO" secondAttribute="trailing" id="xwf-Ci-Ia8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DE6-DE-Uaf" secondAttribute="bottom" id="4eO-eI-Lv1"/>
+                <constraint firstItem="VFA-es-qSR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7Py-l5-Sna"/>
+                <constraint firstAttribute="trailing" secondItem="VFA-es-qSR" secondAttribute="trailing" id="Aum-tu-o3f"/>
+                <constraint firstAttribute="trailing" secondItem="DE6-DE-Uaf" secondAttribute="trailing" id="Eab-YB-K8P"/>
+                <constraint firstItem="DE6-DE-Uaf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nmn-Ix-vW6"/>
+                <constraint firstItem="DE6-DE-Uaf" firstAttribute="top" secondItem="VFA-es-qSR" secondAttribute="bottom" id="dNa-UB-rMa"/>
+                <constraint firstItem="VFA-es-qSR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="t7x-7G-q6n"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="DE6-DE-Uaf" id="isf-NN-NkQ"/>
+                <outlet property="iSOSlider" destination="PZS-iL-TUh" id="qNH-Go-Mo3"/>
+                <outlet property="isoValueLabel" destination="7fy-fi-voB" id="rIS-mk-dqQ"/>
+                <outlet property="sliderTime" destination="D2G-nu-oQ9" id="Y20-Oi-epb"/>
+                <outlet property="sliderValueLabel" destination="fCL-X9-KaF" id="tRC-7p-rwD"/>
+            </connections>
+            <point key="canvasLocation" x="70.5" y="167.5"/>
+        </view>
+    </objects>
+</document>
